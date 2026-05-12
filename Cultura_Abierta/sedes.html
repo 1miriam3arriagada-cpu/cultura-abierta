@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Sedes de Cultura Abierta - Ubicaciones, horarios y accesibilidad">
+    <title>Cultura Abierta | Sedes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo1.png" alt="Logo de Cultura Abierta" class="logo-img">
+                <h1>Cultura<span>Abierta</span></h1>
+                <p class="logo-subtitle">Arte para todos</p>
+            </div>
+
+            <!-- Botón menú hamburguesa (responsive) -->
+            <button class="menu-toggle" aria-label="Menú de Navegación" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- NAV - Landmark de navegación -->
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cartelera.html">Cartelera</a></li>
+                    <li><a href="inscripcion.html">Inscripción</a></li>
+                    <li><a href="sedes.html" class="active" aria-current="page">Sedes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <h2>Nuestras Sedes</h2>
+            <p class="intro-text">Contamos con tres espacios culturales totalmente accesibles. Todos cuentan con rampas, baños adaptados y señalética en braille.</p>
+
+            <div class="venues-grid">
+                <!-- Sede Central -->
+                <article class="venue-card">
+                    <img src="img/sede-central.jpg" alt="Fachada del edificio de la Sede Central en Santiago con acceso accesible y rampa" class="venue-img">
+                    <div class="venue-info">
+                        <h3>Sede Central</h3>
+                        <p>📍 Av. Apoquindo 123, Santiago</p>
+                        <p>🕒 Lun a Vie 9-20hs | Sáb 10-18hs</p>
+                        <p>🚌 Metro: líneas 10, 23, 45</p>
+                        <p>♿ Acceso para sillas de ruedas</p>
+                        <span class="accessibility-badge">Accesibilidad total</span>
+                    </div>
+                </article>
+
+                <!-- Sede Norte -->
+                <article class="venue-card">
+                    <img src="img/sede-norte.jpg" alt="Edificio moderno de la Sede Norte en Los Angeles con entrada principal" class="venue-img">
+                    <div class="venue-info">
+                        <h3>Sede Norte</h3>
+                        <p>📍 Calle Lautaro 501, Los Angeles</p>
+                        <p>🕒 Lun a Vie 10-21hs | Sáb 9-14hs</p>
+                        <p>🚌 Colectivos: 15, 57, 130</p>
+                        <p>♿ Rampa y ascensor</p>
+                        <span class="accessibility-badge">Accesibilidad total</span>
+                    </div>
+                </article>
+
+                <!-- Sede Sur -->
+                <article class="venue-card">
+                    <img src="img/sede-sur.jpg" alt="Vista exterior de la Sede Sur en Temuco rodeada de áreas verdes y estacionamiento" class="venue-img">
+                    <div class="venue-info">
+                        <h3>Sede Sur</h3>
+                        <p>📍 Avda. Arturo Prat 650, Temuco</p>
+                        <p>🕒 Mar a Dom 15-22hs</p>
+                        <p>🚌 Cerca del centro, 5 min caminando</p>
+                        <p>♿ Estacionamiento reservado</p>
+                        <span class="accessibility-badge">Accesibilidad total</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- ASIDE con mapa esquemático accesible (tabla descripción) -->
+            <aside class="info-complementaria" aria-labelledby="map-info">
+                <h3 id="map-info">🚌 Cómo llegar - Resumen de accesos</h3>
+                <div class="table-responsive">
+                    <table class="access-table">
+                        <caption>Medios de transporte y accesibilidad por sede</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Sede</th>
+                                <th scope="col">Transporte público</th>
+                                <th scope="col">Adaptaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Central</td>
+                                <td>Metro (Estación Centro), colectivos 10,23,45</td>
+                                <td>Rampa, baño adaptado, LSE</td>
+                            </tr>
+                            <tr>
+                                <td>Norte</td>
+                                <td>Buses 15,57,130</td>
+                                <td>Ascensor, piso podotáctil</td>
+                            </tr>
+                            <tr>
+                                <td>Sur</td>
+                                <td>Micros + colectivos locales</td>
+                                <td>Estacionamiento reservado, señalética braille</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2026 Cultura Abierta - Todos los derechos reservados</p>
+                    <p>Sitio accesible - Cumple con WCAG 2.1 nivel AA</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Políticas de privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

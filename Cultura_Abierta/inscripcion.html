@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Formulario de inscripción a talleres culturales gratuitos">
+    <title>Cultura Abierta | Inscripción a Talleres</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo1.png" alt="Logo de Cultura Abierta" class="logo-img">
+                <h1>Cultura<span>Abierta</span></h1>
+                <p class="logo-subtitle">Arte para todos</p>
+            </div>
+
+            <!-- Botón menú hamburguesa (responsive) -->
+            <button class="menu-toggle" aria-label="Menú de Navegación" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- NAV - Landmark de navegación -->
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cartelera.html">Cartelera</a></li>
+                    <li><a href="inscripcion.html" class="active" aria-current="page">Inscripción</a></li>
+                    <li><a href="sedes.html">Sedes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container form-container">
+            <h2>Inscripción a Talleres Culturales</h2>
+            <p>Completá el formulario para participar en nuestros talleres gratuitos. Los campos marcados con <span class="required-field" aria-hidden="true">*</span> son obligatorios.</p>
+
+            <form id="inscriptionForm" novalidate>
+                <!-- Nombre completo -->
+                <div class="form-group">
+                    <label for="fullname">
+                        Nombre completo <span class="required-field" aria-hidden="true">*</span>
+                    </label>
+                    <input type="text" id="fullname" name="fullname" required aria-required="true" aria-describedby="fullname-error">
+                    <span id="fullname-error" class="error-message" aria-live="polite"></span>
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="form-group">
+                    <label for="email">
+                        Correo electrónico <span class="required-field" aria-hidden="true">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-help email-error">
+                    <div id="email-help" class="help-text">Ejemplo: nombre@dominio.com</div>
+                    <span id="email-error" class="error-message" aria-live="polite"></span>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="form-group">
+                    <label for="phone">Teléfono de Contacto</label>
+                    <input type="tel" id="phone" name="phone" aria-describedby="phone-help phone-error">
+                    <div id="phone-help" class="help-text">Ingresa el código de área (ej: 011 1234-5678)</div>
+                    <span id="phone-error" class="error-message" aria-live="polite"></span>
+                </div>
+
+                <!-- Taller -->
+                <div class="form-group">
+                    <label for="workshop">
+                        Taller de interés <span class="required-field" aria-hidden="true">*</span>
+                    </label>
+                    <select id="workshop" name="workshop" required aria-required="true" aria-describedby="workshop-error">
+                        <option value="">Selecciona un taller</option>
+                        <option value="pintura">🎨 Taller de Pintura</option>
+                        <option value="teatro">🎭 Taller de Teatro para Adolescentes</option>
+                        <option value="musica">🎵 Taller de Música</option>
+                        <option value="danza">💃 Taller de Danza</option>
+                    </select>
+                    <span id="workshop-error" class="error-message" aria-live="polite"></span>
+                </div>
+
+                <!-- Sede -->
+                <div class="form-group">
+                    <label for="venue">
+                        Sede preferida <span class="required-field" aria-hidden="true">*</span>
+                    </label>
+                    <select id="venue" name="venue" required aria-required="true" aria-describedby="venue-error">
+                        <option value="">Selecciona una sede</option>
+                        <option value="Central">Sede Central</option>
+                        <option value="norte">Sede Norte</option>
+                        <option value="sur">Sede Sur</option>
+                    </select>
+                    <span id="venue-error" class="error-message" aria-live="polite"></span>
+                </div>
+
+                <!-- Comentarios -->
+                <div class="form-group">
+                    <label for="comments">Comentarios o sugerencias</label>
+                    <textarea id="comments" name="comments" rows="4" aria-describedby="comments-help"></textarea>
+                    <div id="comments-help" class="help-text">Cuéntanos si necesitas algún requerimiento específico (discapacidad u otro).</div>
+                </div>
+
+                <!-- Aceptación de términos -->
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="acceptTerms" name="acceptTerms" required aria-required="true" aria-describedby="terms-error">
+                        <label for="acceptTerms">Acepto los <a href="#">términos y condiciones</a> y el tratamiento de mis datos personales <span class="required-field" aria-hidden="true">*</span></label>
+                    </div>
+                    <span id="terms-error" class="error-message" aria-live="polite"></span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Enviar inscripción</button>
+                    <button type="reset" class="btn btn-secondary">Limpiar formulario</button>
+                </div>
+                <div id="formSuccessMessage" class="success-message" style="display: none;"></div>
+            </form>
+
+            <!-- ASIDE con requisitos de inscripción (dentro del main) -->
+            <aside class="info-complementaria" aria-labelledby="requisitos-title">
+                <h3 id="requisitos-title">📋 Requisitos para participar</h3>
+                <ul>
+                    <li>Ser mayor de 6 años (los menores deben venir con un adulto responsable).</li>
+                    <li>Completar todos los campos del formulario.</li>
+                    <li>No hay costo de inscripción, pero los cupos son limitados.</li>
+                </ul>
+                <p>✅ Recibirás un correo de confirmación en un plazo de 48 horas.</p>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2026 Cultura Abierta - Todos los derechos reservados</p>
+                    <p>Sitio accesible - Cumple con WCAG 2.1 nivel AA</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Políticas de privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

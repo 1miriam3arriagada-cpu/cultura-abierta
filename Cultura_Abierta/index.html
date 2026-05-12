@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Cultura Abierta - Portal de talleres, cartelera y sedes culturales">
+    <title>Cultura Abierta | Inicio</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fuente tipográfica accesible -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- SKIP LINK - ACCESIBILIDAD POR TECLADO -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- HEADER con landmark -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo1.png" alt="Logo de Cultura Abierta" class="logo-img">
+                <h1>Cultura<span>Abierta</span></h1>
+                <p class="logo-subtitle">Arte para todos</p>
+            </div>
+
+            <!-- Botón menú hamburguesa (responsive) -->
+            <button class="menu-toggle" aria-label="Menú de Navegación" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- NAV - Landmark de navegación -->
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                    <li><a href="cartelera.html">Cartelera</a></li>
+                    <li><a href="inscripcion.html">Inscripción</a></li>
+                    <li><a href="sedes.html">Sedes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN - Landmark principal (main único) -->
+    <main id="main-content">
+        <!-- Hero section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <h2 id="hero-title">Cultura para tu comunidad</h2>
+                <p>Talleres, exposiciones y eventos culturales en tu barrio. Participación gratuita y abierta para todos y para todas las edades.</p>
+                <a href="inscripcion.html" class="btn btn-primary">Inscribirme ahora</a>
+            </div>
+        </section>
+
+        <!-- Sección de tarjetas con Flex/Grid -->
+        <section class="features" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title">Lo que ofrecemos</h2>
+
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <img src="img/talleres-icon.jpg" alt="Icono de talleres - pincel y lienzo" class="feature-icon">
+                        <h3>Talleres gratuitos</h3>
+                        <p>Arte, música, teatro y danza para todas las edades.</p>
+                        <a href="inscripcion.html" aria-label="Ver talleres disponibles">Ver Talleres</a>
+                    </article>
+
+                    <article class="feature-card">
+                        <img src="img/cartelera-icon.jpg" alt="Icono de cartelera - calendario con estrella" class="feature-icon">
+                        <h3>Cartelera Cultural</h3>
+                        <p>Conocé los próximos eventos y exposiciones.</p>
+                        <a href="cartelera.html" aria-label="Ver cartelera de eventos">Ver Cartelera</a>
+                    </article>
+
+                    <article class="feature-card">
+                        <img src="img/sedes-icon.jpg" alt="Icono de sedes - ubicación geográfica" class="feature-icon">
+                        <h3>3 sedes disponibles</h3>
+                        <p>Centro, Norte y Sur. Encuentra la sede más cercana.</p>
+                        <a href="sedes.html" aria-label="Ver ubicación de sedes">Ver sedes</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ASIDE - Landmark complementario -->
+    <aside class="newsletter" aria-labelledby="newsletter-title">
+        <div class="container">
+            <h3 id="newsletter-title">Enterate primero</h3>
+            <p>Suscribete a nuestro newsletter y recibe novedades culturales.</p>
+
+            <!-- Formulario dentro del Aside -->
+            <form class="newsletter-form" id="newsletter-Form" novalidate>
+                <div class="form-group">
+                    <label for="newsletter-email">Correo electrónico <span aria-hidden="true">*</span></label>
+                    <input type="email" id="newsletter-email" name="email"
+                           placeholder="tucorreo@ejemplo.com"
+                           aria-describedby="email-error" required>
+                    <span id="email-error" class="error-message" aria-live="polite"></span>
+                </div>
+                <button type="submit" class="btn btn-secondary">Suscribirme</button>
+            </form>
+        </div>
+    </aside>
+
+    <!-- FOOTER - Landmark pie de página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2026 Cultura Abierta - Todos los derechos reservados</p>
+                    <p>Sitio accesible - WCAG 2.1 nivel AA</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Políticas de privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para la interactividad -->
+    <script src="js/main.js"></script>
+</body>
+</html>

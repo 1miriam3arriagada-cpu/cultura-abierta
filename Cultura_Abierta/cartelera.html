@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Cartelera cultural de Cultura Abierta - Eventos, exposiciones y espectáculos en nuestras sedes">
+    <title>Cultura Abierta | Cartelera</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- SKIP LINK - Accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- HEADER con logo y navegación -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo1.png" alt="Logo de Cultura Abierta" class="logo-img">
+                <h1>Cultura<span>Abierta</span></h1>
+                <p class="logo-subtitle">Arte para todos</p>
+            </div>
+
+            <!-- Botón menú hamburguesa (responsive) -->
+            <button class="menu-toggle" aria-label="Menú de Navegación" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- NAV - Landmark de navegación -->
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cartelera.html" class="active" aria-current="page">Cartelera</a></li>
+                    <li><a href="inscripcion.html">Inscripción</a></li>
+                    <li><a href="sedes.html">Sedes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <div class="container">
+            <h2>Cartelera Cultural</h2>
+            <p class="intro-text">Descubre los próximos eventos culturales en nuestras sedes. Todos son gratuitos y con inscripción previa. ¡Te esperamos!</p>
+
+            <!-- GALERÍA DE EVENTOS CON IMÁGENES -->
+            <section aria-labelledby="events-gallery-title">
+                <h3 id="events-gallery-title" class="section-subtitle">Eventos destacados</h3>
+                <div class="events-grid">
+                    <!-- Evento 1 -->
+                    <article class="event-card">
+                        <img src="img/evento-pintura.jpg" alt="Niños y niñas pintando en un taller de arte al aire libre">
+                        <div class="event-info">
+                            <h3>Taller de Pintura para Niños</h3>
+                            <p><strong>Fecha:</strong> 10/05/2026</p>
+                            <p><strong>Sede:</strong> Sede Central</p>
+                            <p><strong>Horario:</strong> 15:00 - 17:00</p>
+                            <a href="inscripcion.html" class="btn-small">Inscribirme</a>
+                        </div>
+                    </article>
+
+                    <!-- Evento 2 -->
+                    <article class="event-card">
+                        <img src="img/evento-musica.jpg" alt="Orquesta sinfónica juvenil interpretando música clásica en un auditorio">
+                        <div class="event-info">
+                            <h3>Concierto de Música Clásica</h3>
+                            <p><strong>Fecha:</strong> 15/05/2026</p>
+                            <p><strong>Sede:</strong> Sede Norte</p>
+                            <p><strong>Horario:</strong> 19:00 - 21:00</p>
+                            <a href="inscripcion.html" class="btn-small">Inscribirme</a>
+                        </div>
+                    </article>
+
+                    <!-- Evento 3 -->
+                    <article class="event-card">
+                        <img src="img/evento-teatro.jpg" alt="Escena de la obra de teatro La Casa de Bernarda Alba">
+                        <div class="event-info">
+                            <h3>Teatro: "La Casa de Bernarda Alba"</h3>
+                            <p><strong>Fecha:</strong> 25/05/2026</p>
+                            <p><strong>Sede:</strong> Sede Central</p>
+                            <p><strong>Horario:</strong> 20:00 - 22:30</p>
+                            <a href="inscripcion.html" class="btn-small">Inscribirme</a>
+                        </div>
+                    </article>
+
+                    <!-- Evento 4 -->
+                    <article class="event-card">
+                        <img src="img/evento-danza.jpg" alt="Bailarinas de danza contemporánea en una clase abierta">
+                        <div class="event-info">
+                            <h3>Clase abierta de Danza</h3>
+                            <p><strong>Fecha:</strong> 28/05/2026</p>
+                            <p><strong>Sede:</strong> Sede Norte</p>
+                            <p><strong>Horario:</strong> 17:00 - 19:00</p>
+                            <a href="inscripcion.html" class="btn-small">Inscribirme</a>
+                        </div>
+                    </article>
+
+                    <!-- Evento 5 -->
+                    <article class="event-card">
+                        <img src="img/evento-foto.jpg" alt="Exposición de fotografías urbanas en galería">
+                        <div class="event-info">
+                            <h3>Exposición de Fotografía</h3>
+                            <p><strong>Fecha:</strong> 20/05/2026</p>
+                            <p><strong>Sede:</strong> Sede Sur</p>
+                            <p><strong>Horario:</strong> 10:00 - 18:00</p>
+                            <a href="inscripcion.html" class="btn-small">Inscribirme</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- TABLA ACCESIBLE (cumple con caption y th scope) -->
+            <section aria-labelledby="table-summary">
+                <h3 id="table-summary" class="section-subtitle">Calendario completo de eventos</h3>
+                <div class="table-responsive">
+                    <table class="events-table">
+                        <caption>Programación cultural detallada para mayo 2026</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Evento</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Sede</th>
+                                <th scope="col">Horario</th>
+                                <th scope="col">Cupos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Taller de Pintura para Niños</td>
+                                <td>10/05/2026</td>
+                                <td>Central</td>
+                                <td>15:00 - 17:00</td>
+                                <td>25 disponibles</td>
+                            </tr>
+                            <tr>
+                                <td>Concierto de Música Clásica</td>
+                                <td>15/05/2026</td>
+                                <td>Norte</td>
+                                <td>19:00 - 21:00</td>
+                                <td>120 disponibles</td>
+                            </tr>
+                            <tr>
+                                <td>Exposición de Fotografía</td>
+                                <td>20/05/2026</td>
+                                <td>Sede Sur</td>
+                                <td>10:00 - 18:00</td>
+                                <td>Acceso libre</td>
+                            </tr>
+                            <tr>
+                                <td>Teatro: "La Casa de Bernarda Alba"</td>
+                                <td>25/05/2026</td>
+                                <td>Sede Central</td>
+                                <td>20:00 - 22:30</td>
+                                <td>50 disponibles</td>
+                            </tr>
+                            <tr>
+                                <td>Clase abierta de Danza</td>
+                                <td>28/05/2026</td>
+                                <td>Sede Norte</td>
+                                <td>17:00 - 19:00</td>
+                                <td>40 disponibles</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-note">* Para participar en cualquier evento, completá el <a href="inscripcion.html">formulario de inscripción</a>.</p>
+            </section>
+
+            <!-- ASIDE con información complementaria (UN SOLO ASIDE) -->
+            <aside class="info-complementaria" aria-labelledby="aside-title">
+                <h3 id="aside-title">📢 ¿Sabías que...?</h3>
+                <p>Todos nuestros eventos son gratuitos y tienen cupos limitados. Te recomendamos inscribirte con anticipación.</p>
+                <p>🎟️ La entrada es gratuita, pero requieres inscripción previa. Los cupos se asignan por orden de llegada.</p>
+                <p>🚆 Cómo llegar: todas las sedes tienen acceso por transporte público. Consultá la sección <a href="sedes.html">Sedes</a> para más detalles.</p>
+                <p>📧 Consultas: <a href="mailto:cultura@abierta.org">cultura@abierta.org</a> | 📞 Teléfono: 0800-123-4567</p>
+                <p>📱 Seguinos en redes sociales para enterarte de nuevas fechas: @CulturaAbierta</p>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2026 Cultura Abierta - Todos los derechos reservados</p>
+                    <p>Sitio accesible - Cumple con WCAG 2.1 nivel AA</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Políticas de privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
